@@ -118,6 +118,7 @@ export const DashboardScreen = ({
           }),
         }
       );
+      setUserIdentifier(user.email);
     } catch (e) {
       console.error(e);
     }
@@ -137,7 +138,7 @@ export const DashboardScreen = ({
   }, [user]);
 
   useEffect(() => {
-    if (unsmokedCigarettes !== undefined) {
+    if (unsmokedCigarettes) {
       getEconomies();
       getTimeOfLifePreserved();
       getWaterEconomies();
