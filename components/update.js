@@ -16,7 +16,6 @@ export const UpdateButton = ({ id, token, unsmokedCigarettes }) => {
           },
           body: JSON.stringify({
             lastTime: new Date(),
-            unsmokedCigarettes: unsmokedCigarettes,
           }),
         }
       );
